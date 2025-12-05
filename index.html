@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift for Humanity - Information about  ASEA Redox</title>
+    <title>Gift for Humanity - Information about ASEA Redox</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -13,30 +17,126 @@
             background-color: #f4f4f4;
             color: #333;
         }
+        
         header {
             background-color: #007bff;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem 1rem;
         }
+        
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+        }
+        
+        header p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
         }
+        
         .section {
             background: white;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
         }
+        
+        .redox-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .redox-title {
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 12px;
+        }
+        
+        .card-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .card {
+            display: flex;
+            align-items: center;
+            background: #0066cc;
+            color: #fff;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-decoration: none;
+            transition: transform 0.15s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            background: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+        
+        .card-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0 0 4px;
+            word-wrap: break-word;
+        }
+        
+        .card-meta {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .password-section {
+            text-align: center;
+            font-weight: bold;
+            color: #dc3545;
+            padding: 1rem;
+            background: #fff3cd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .password-section p {
+            margin: 0;
+        }
+        
         .link-item {
+            display: block;
             background: #e9ecef;
             padding: 1rem;
             border-radius: 5px;
@@ -44,21 +144,107 @@
             color: #007bff;
             text-align: center;
             transition: background 0.3s;
+            margin-bottom: 1rem;
+            word-wrap: break-word;
         }
+        
         .link-item:hover {
             background: #007bff;
             color: white;
         }
-        .password-section {
-            text-align: center;
-            font-weight: bold;
-            color: #dc3545;
+        
+        .testimonial-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #007bff;
+            transition: background 0.3s;
         }
+        
+        .testimonial-link:hover {
+            background: #007bff;
+            color: white;
+        }
+        
+        .testimonial-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .testimonial-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            flex: 1;
+            min-width: 0;
+            font-weight: 500;
+        }
+        
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem 1rem;
             background-color: #007bff;
             color: white;
+            font-size: 0.9rem;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+                    @media (min-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .redox-title {
+                font-size: 1.4rem;
+                padding: 0.5rem 1.5rem;
+            }
+            
+            .card {
+                padding: 12px 16px;
+            }
+            
+            .card-icon {
+                width: 48px;
+                height: 48px;
+                margin-right: 16px;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-container {
+                max-width: 560px;
+            }
         }
     </style>
 </head>
@@ -66,189 +252,81 @@
     <header>
         <h1>Gift for Humanity</h1>
         <p>Empowering Wellness Through ASEA Global</p>
-     
     </header>
     
     <div class="container">
         <div class="section">
-            <h2>Welcome to my page about  ASEA REDOX</h2>
+            <h2>Welcome to my page about ASEA REDOX</h2>
             <p>We're a wellness company founded on—and fueled by—human potential. Explore redox signaling molecules and transformative health solutions.</p>
-           
         </div>
-      <!-- ==== REDOX TECHNOLOGY SECTION ==== -->
-<div class="section">
-    <div style="text-align:center; margin-bottom:1rem;">
-        <h2 style="display:inline-block; font-size:1.4rem; color:#333; margin:0; padding:0.25rem 0.75rem;
-                   background:linear-gradient(135deg,#ff9a9e,#fad0c4); border-radius:12px;">
-            WHAT IS THIS "REDOX" TECHNOLOGY?
-        </h2>
-    </div>
-
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Redox Technology Modules</title>
-<style>
-  body {
-    margin:0; padding:20px; font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-  }
-  .container { max-width:560px; margin:auto; }
-  .card {
-    display:flex; align-items:center;
-    background:#0066cc; color:#fff;
-    margin-bottom:12px; border-radius:12px;
-    padding:12px 16px; box-shadow:0 2px 4px rgba(0,0,0,.1);
-    text-decoration:none; transition:transform .15s;
-  }
-  .card:hover { transform:translateY(-2px); }
-  .icon {
-    width:48px; height:48px; margin-right:16px;
-    background:#fff; border-radius:8px;
-    display:flex; align-items:center; justify-content:center;
-    overflow:hidden;
-  }
-  .icon img { width:70%; height:70%; object-fit:contain; }
-  .text { flex:1; }
-  .title { font-weight:600; font-size:1.1rem; margin:0 0 4px; }
-  .meta {
-    font-size:0.85rem; opacity:0.9;
-    display:flex; align-items:center; gap:6px;
-  }
-  .duration { margin-left:auto; font-size:0.9rem; }
-  .menu {
-    width:24px; height:24px; cursor:pointer;
-    background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg>') center no-repeat;
-  }
-</style>
-</head>
-<body>
-
-<div class="container">
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Redox Technology Modules</title>
-<style>
-  body {
-    margin:0; padding:20px; font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-  }
-  .container { max-width:560px; margin:auto; }
-  .card {
-    display:flex; align-items:center;
-    background:#0066cc; color:#fff;
-    margin-bottom:12px; border-radius:12px;
-    padding:12px 16px; box-shadow:0 2px 4px rgba(0,0,0,.1);
-    text-decoration:none; transition:transform .15s;
-  }
-  .card:hover { transform:translateY(-2px); }
-  .icon {
-    width:48px; height:48px; margin-right:16px;
-    background:#fff; border-radius:8px;
-    display:flex; align-items:center; justify-content:center;
-    overflow:hidden;
-  }
-  .icon img { width:70%; height:70%; object-fit:contain; }
-  .text { flex:1; }
-  .title { font-weight:600; font-size:1.1rem; margin:0 0 4px; }
-  .meta {
-    font-size:0.85rem; opacity:0.9;
-    display:flex; align-items:center; gap:6px;
-  }
-  .duration { margin-left:auto; font-size:0.9rem; }
-  .menu {
-    width:24px; height:24px; cursor:pointer;
-    background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg>') center no-repeat;
-  }
-</style>
-</head>
-<body>
-
-<div class="container">
-
-  <!-- #6 -->
-  <a href="https://vimeo.com/149776255?fl=pl&fe=sh" class="card" target="_blank">
-   
-    <div class="text">
-      <div class="title">What Are YOUR “Redox Signaling Molecules?”</div>
-      <div class="meta">(7 min)</div>
-    </div>
-    <div class="duration"></div>
-    <div class="menu"></div>
-  </a>
-
-  <!-- #7 -->
-  <a href="https://vimeo.com/307884544?fl=pl&fe=sh" class="card" target="_blank">
-   
-    <div class="text">
-      <div class="title">Dr. Silverman: How Does It Work?</div>
-      <div class="meta">(10 min)</div>
-    </div>
-    <div class="duration"></div>
-    <div class="menu"></div>
-  </a>
-
-  <!-- #8 -->
- <a href="https://discoverredox.com/redox-science/" class="card" target="_blank">
-   
-    <div class="text">
-      <div class="title">Science, Studies & Research</div>
-      <div class="meta"></div>
-    </div>
-    <div class="duration"></div>
-    <div class="menu"></div>
-  </a>
-
-  <!-- #9 -->
- <a href="https://youtu.be/3bBFeR8YlSo" class="card" target="_blank">
-  
-    <div class="text">
-      <div class="title">“Salt+Water?” No. But it WAS.</div>
-      <div class="meta">YouTube - David Silverman (14 min)</div>
-    </div>
-    <div class="duration"></div>
-    <div class="menu"></div>
-  </a>
-
-  <!-- #10 -->
- <a href="https://youtu.be/ra2hpDFIUdA" class="card" target="_blank">
-   
-    <div class="text">
-      <div class="title">Made in This FDA-Listed & Audited Plant</div>
-      <div class="meta">YouTube - ASEA Global (USA) (5 min)</div>
-    </div>
-    <div class="duration"></div>
-    <div class="menu"></div>
-  </a>
-
-</div>
-
-</body>
-</html>
-<!-- ==== END REDOX SECTION ==== -->
         
         <div class="section">
-             <div class="password-section">
+            <div class="redox-header">
+                <h2 class="redox-title">WHAT IS THIS "REDOX" TECHNOLOGY?</h2>
+            </div>
+            
+            <div class="card-container">
+                <a href="https://vimeo.com/149776255?fl=pl&fe=sh" class="card" target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon">🎬</div>
+                    <div class="card-text">
+                        <div class="card-title">What Are YOUR "Redox Signaling Molecules?"</div>
+                        <div class="card-meta">(7 min)</div>
+                    </div>
+                </a>
+                
+                <a href="https://vimeo.com/307884544?fl=pl&fe=sh" class="card" target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon">👨‍⚕️</div>
+                    <div class="card-text">
+                        <div class="card-title">Dr. Silverman: How Does It Work?</div>
+                        <div class="card-meta">(10 min)</div>
+                    </div>
+                </a>
+                
+                <a href="https://discoverredox.com/redox-science/" class="card" target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon">🔬</div>
+                    <div class="card-text">
+                        <div class="card-title">Science, Studies & Research</div>
+                    </div>
+                </a>
+                
+                <a href="https://youtu.be/3bBFeR8YlSo" class="card" target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon">💧</div>
+                    <div class="card-text">
+                        <div class="card-title">"Salt+Water?" No. But it WAS.</div>
+                        <div class="card-meta">YouTube - David Silverman (14 min)</div>
+                    </div>
+                </a>
+                
+                <a href="https://youtu.be/ra2hpDFIUdA" class="card" target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon">🏭</div>
+                    <div class="card-text">
+                        <div class="card-title">Made in This FDA-Listed & Audited Plant</div>
+                        <div class="card-meta">YouTube - ASEA Global (USA) (5 min)</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="password-section">
                 <p>🔑 Password: <strong>redox</strong> (Use this to see testimonials below)</p>
             </div>
-           <div data-testid="NewLinkContainerInner" class="LinkContainer_LinkContainer__zyrUB grid"><div class="invisible absolute top-[calc(var(--link-gap)*-1)] block" id="88409163"></div>
-               <a href="http://www.realredoxresults.com" target="_blank" data-testid="LinkClickTriggerLink" rel="noopener noreferrer" class="grid w-full grid-cols-1 focus:outline-none grid-rows-[min-content_1fr]">
-                   <div data-testid="NewLinkChin" data-animation-target="link-chin" class="relative flex min-h-16 flex-col justify-center gap-[1px] py-2 tracking-[-0.2px] items-center px-16"><div class="absolute bottom-2 left-2 top-2 flex h-12 w-12 items-center justify-center overflow-hidden rounded-[var(--button-style-inner-radius)] text-[var(--button-style-text)]">
-                       <img loading="lazy" src="https://ugc.production.linktr.ee/40b9e475-7757-4875-aa57-fc0212b354b5_image.png?io=true&amp;size=thumbnail-stack_v1_0" alt="!#5! 
-                           WHAT ISSUES HAS THIS WORKED FOR?? (PW "redox")" class="h-full w-full object-cover"></div>
-                      <div class="w-full overflow-hidden overflow-ellipsis text-balance text-[14px] font-medium leading-[1.2] text-[var(--button-style-text)] sm:text-[16px] line-clamp-2 text-center text-[var(--button-style-text)]">WHAT ISSUES DOES THIS HELP WITH? (PW "redox")</div></div></a>
-               
-</div>
+            
+            <a href="http://www.realredoxresults.com" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+                <div class="testimonial-icon">
+                    <img src="https://ugc.production.linktr.ee/40b9e475-7757-4875-aa57-fc0212b354b5_image.png?io=true&size=thumbnail-stack_v1_0" alt="Testimonials">
+                </div>
+                <div class="testimonial-text">
+                    WHAT ISSUES DOES THIS HELP WITH? (PW "redox")
+                </div>
+            </a>
         </div>
-        <div class="section">
-         <p>Visit my official ASEA Global profile for more details, and how to purchase from my website:</p>
-            <a href="https://www.aseaglobal.com/en-US?webSiteName=dianacastillo" class="link-item" target="_blank">ASEA Global - Diana Castillo</a>
-   
         
+        <div class="section">
+            <h2>Get Started</h2>
+            <p>Visit my official ASEA Global profile for more details, and how to purchase from my website:</p>
+            <a href="https://www.aseaglobal.com/en-US?webSiteName=dianacastillo" class="link-item" target="_blank" rel="noopener noreferrer">ASEA Global - Diana Castillo</a>
+            
             <h2>About Redox & Wellness</h2>
             <p>Unlock the power of redox signaling with ASEA products. This page combines my passion for giving back to humanity with cutting-edge wellness science. Join the movement today!</p>
         </div>
